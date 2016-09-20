@@ -14,7 +14,6 @@ group :development do
   gem 'listen'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :test do

@@ -1,3 +1,3 @@
-WikiOne is my Wiki app.
+WikiOne.
 
 Bloc's SaaS Rails Web Development project.
