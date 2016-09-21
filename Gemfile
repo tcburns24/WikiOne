@@ -42,6 +42,6 @@ gem 'turbolinks'
 
 gem 'bootstrap-sass'
 
-gem 'bootswatch-rails'
-
 gem 'devise'
+
+gem 'figaro', '1.0'
