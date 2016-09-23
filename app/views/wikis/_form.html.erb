@@ -1,0 +1,18 @@
+<div class="col-md-8">
+  <%= form_for wiki do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control', placeholder: "Enter title here" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, rows: 6, class: 'form-control', placeholder: "Enter text here" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :private, class: 'checkbox' do %>
+        <%= f.check_box :private %> Make private
+      <% end %>
+    </div>
+    <%= f.submit "Save", class: 'btn btn-success' %>
+  <% end %>
+</div>

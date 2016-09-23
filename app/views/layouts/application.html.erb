@@ -10,17 +10,12 @@
   </head>
 
   <% if user_signed_in? %>
-
     Signed in as: <strong><%= current_user.email %></strong> |
-
     <%= link_to 'Edit Profile', edit_user_registration_path, :class => 'navbar-link' %> - <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
-
+    <%= link_to "Wikis", wikis_path %>
   <% else %>
-
     <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %> -
-
     <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %>
-
   <% end %>
 
   <body>
@@ -28,6 +23,9 @@
       <ul class="nav nav-tabs">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "Wikis", wikis_path %></li>
+        <% end %>
       </ul>
 
       <% if flash[:notice] %>

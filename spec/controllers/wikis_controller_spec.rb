@@ -2,7 +2,12 @@ require 'rails_helper'
 
 RSpec.describe WikisController, type: :controller do
 
-  let(:my_wiki) { Wiki.create!(title: "sample title", body: "sample body text" , private: false) }
+  let(:my_user) { FactoryGirl.create(:user) }
+  let(:my_wiki) { FactoryGirl.create(:wiki, user_id: my_user)}
+
+#  before(:all) do
+#    sign_in my_user
+#  end
 
 #---------------------------------------#
 
@@ -107,7 +112,7 @@ RSpec.describe WikisController, type: :controller do
     it "redirects to the updated post" do
       new_title = "Sample New Title"
       new_body = "Sample New Body Text"
-      put :update, id: my_post.id, post: {title: new_title, body: new_body}
+      put :update, id: my_wiki.id, wiki: {title: new_title, body: new_body}
       expect(response).to redirect_to my_post
     end
   end
@@ -122,7 +127,7 @@ RSpec.describe WikisController, type: :controller do
     end
 
     it "redirects to wiki index" do
-      delete :destroy, {id: my_post.id}
+      delete :destroy, {id: my_wiki.id}
       expect(response).to redirect_to wikis_path
     end
   end
