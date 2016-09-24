@@ -32,11 +32,7 @@ RSpec.describe WikisController, type: :controller do
 
     it "assigns @my_wiki to @wiki" do
       get :show, {id: @my_wiki.id}
-<<<<<<< HEAD
       expect(assigns(:wiki)).to eq(@my_wiki)
-=======
-      expect(assigns(:wiki)).to eq(my_post)
->>>>>>> 8e1fb8a57650be4fe0fddf092c8bd80ca24a1c76
     end
   end
 
@@ -80,7 +76,7 @@ RSpec.describe WikisController, type: :controller do
 
   describe "GET edit" do
     it "returns http success" do
-      get :edit
+      get :edit, {id: @my_wiki.id}
       expect(response).to have_http_status(:success)
     end
 
@@ -106,11 +102,7 @@ RSpec.describe WikisController, type: :controller do
       new_body =  "Sample New Body Text"
 
       put :update, id: @my_wiki.id, wiki: {title: new_title, body: new_body}
-<<<<<<< HEAD
       updated_wiki = assigns(:wiki)
-=======
-      updated_post = assigns(:post)
->>>>>>> 8e1fb8a57650be4fe0fddf092c8bd80ca24a1c76
       expect(updated_wiki.id).to eq @my_wiki.id
       expect(updated_wiki.title).to eq new_title
       expect(updated_wiki.body).to eq new_body
@@ -120,11 +112,7 @@ RSpec.describe WikisController, type: :controller do
       new_title = "Sample New Title"
       new_body = "Sample New Body Text"
       put :update, id: @my_wiki.id, wiki: {title: new_title, body: new_body}
-<<<<<<< HEAD
       expect(response).to redirect_to @my_wiki
-=======
-      expect(response).to redirect_to my_post
->>>>>>> 8e1fb8a57650be4fe0fddf092c8bd80ca24a1c76
     end
   end
 
