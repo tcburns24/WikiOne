@@ -7,27 +7,43 @@ class WikiPolicy < ApplicationPolicy
   end
 
   def create?
-  end
-
-  def update?
-    user.admin?
+    true
   end
 
   def index?
+    true
+  end
+
+  def update?
+    if wiki.private?
+      user == wiki.user
+    else
+      user.present?
+    end
   end
 
   def show?
+    if wiki.private?
+      wiki.user == user
+    else
+      true
+    end
   end
 
   def new?
+    true
   end
 
   def edit?
-    user.admin?
+    if wiki.private?
+      user == wiki.user
+    else
+      user.present?
+    end
   end
 
-  def delete?
-    user.admin?
+  def destroy?
+    user.is_admin? || wiki.user == user
   end
 
 end
