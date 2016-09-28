@@ -1,10 +1,9 @@
 class WikisController < ApplicationController
-  #before_action :require_sign_in, except: [:index, :show]
-  before_action :authorize_user, except: [:index, :show]
+  before_action :authenticate_user!
 
   def index
     @wikis = Wiki.all
-    authorize @wiki
+    authorize @wikis
   end
 
   def show

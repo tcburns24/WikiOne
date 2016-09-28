@@ -5,7 +5,7 @@ RSpec.describe WikisController, type: :controller do
   before(:each) do
     @my_user = FactoryGirl.create(:user)
     sign_in @my_user
-    @stranger_user = FactoryGirl.create(:user)
+    @stranger_user = FactoryGirl.create(:user, email: "stranger_things@gmail.com")
     @my_wiki = FactoryGirl.create(:wiki, user: @stranger_user)
   end
 
