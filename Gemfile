@@ -21,6 +21,7 @@ group :test do
   gem 'shoulda'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'simplecov'
+  gem 'pundit-matchers', '~> 1.1.0'
 end
 
 group :development, :test do
@@ -45,3 +46,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 
 gem 'figaro', '1.0'
+
+gem 'pundit'
+
+gem 'rolify'
