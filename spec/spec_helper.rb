@@ -1,4 +1,5 @@
 require 'simplecov'
+require 'pundit/matchers'
 SimpleCov.start
 require 'factory_girl_rails'
 
