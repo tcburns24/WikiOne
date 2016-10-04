@@ -29,6 +29,8 @@ group :development, :test do
   gem 'faker'
 end
 
+gem 'stripe'
+
 gem 'rails-controller-testing'
 
 gem 'sass-rails', '~> 5.0'
