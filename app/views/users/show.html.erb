@@ -1,2 +1,41 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<!-- Similar to Blocitoff, please display all of my wikis
+Also, let me create a new wiki -->
+
+<!-- Please show me my current role -->
+<br>
+<div class="col-md-4">
+  <%= link_to "New Wiki", new_wiki_path, class: 'btn btn-success' %>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="title">
+  DASHBOARD
+  <br>
+</div>
+
+<div class="heading">
+  <br>
+    <h3><%= "User: " "#{current_user.email}" %></h3>
+    <h4><%= "Role: " "#{current_user.roles.first.name}" %></h4>
+  <br>
+</div>
+
+<div class="wikis">
+  <% @wikis.each do |wiki| %>
+    <%= link_to wiki.title, wiki %>
+    <small>
+      <%= wiki.body %>
+    </small>
+  <% end %>
+</div>
+
+<!-- Style me! -->
+<div class="payment">
+  <br>
+  <br>
+    <%= render partial: "charges/new_charge" %>
+  <br>
+</div>
