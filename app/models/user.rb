@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_many :wikis
   after_initialize :set_role
 
+  def downgrade
+    self.remove_role :premium
+  end
 
   private
 
