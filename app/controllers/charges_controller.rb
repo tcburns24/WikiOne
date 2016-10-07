@@ -9,6 +9,7 @@ class ChargesController < ApplicationController
 
     Stripe::Charge.create(
       customer: customer.id,
+      amount: 1999,
       amount: 75,
       description: "Premium WikiOne Membership - #{current_user.email}",
       currency: 'usd'

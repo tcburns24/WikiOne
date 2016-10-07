@@ -19,11 +19,17 @@ Also, let me create a new wiki -->
 <div class="heading">
   <br>
     <h3><%= "User: " "#{current_user.email}" %></h3>
+    <% current_user.roles.each do |role| %>
+      <h4><%= "Role: " "#{role.name}" %></h4>
+    <% end %>
     <h4><%= "Role: " "#{current_user.roles.first.name}" %></h4>
   <br>
 </div>
 
 <div class="wikis">
+  <h4> My Wikis </h4>
+  <% @wikis.each do |wiki| %>
+    <br> <strong><%= link_to wiki.title, wiki %></strong>
   <% @wikis.each do |wiki| %>
     <%= link_to wiki.title, wiki %>
     <small>
@@ -33,6 +39,24 @@ Also, let me create a new wiki -->
 </div>
 
 <!-- Style me! -->
+<div class="downgrade">
+  <br>
+  <% if @user.is_premium? %>
+    <%= link_to "Downgrade to Standard", downgrade_path, method: :post, class: "btn btn-danger left-block", data: {confirm: "Are you sure you want to downgrade your account? All your private wikis will be made public!"} %>
+  <% else %>
+
+  <div class="payment">
+    <br>
+    <br>
+      <%= render partial: "charges/new_charge" %>
+    <br>
+  </div>
+  <% end %>
+  <br>
+</div>
+
+<div class="copyright">
+  © 2016 WikiOne
 <div class="payment">
   <br>
   <br>
