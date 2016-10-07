@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   get "profile" => "users#show", :as => 'profile'
 
+<<<<<<< HEAD
   post "users/downgrade" => "users#downgrade", :as => "downgrade"
 
+=======
+>>>>>>> master
 end
