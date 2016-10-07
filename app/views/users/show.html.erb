@@ -19,25 +19,19 @@ Also, let me create a new wiki -->
 <div class="heading">
   <br>
     <h3><%= "User: " "#{current_user.email}" %></h3>
-<<<<<<< HEAD
     <% current_user.roles.each do |role| %>
       <h4><%= "Role: " "#{role.name}" %></h4>
     <% end %>
-=======
     <h4><%= "Role: " "#{current_user.roles.first.name}" %></h4>
->>>>>>> master
   <br>
 </div>
 
 <div class="wikis">
-<<<<<<< HEAD
   <h4> My Wikis </h4>
   <% @wikis.each do |wiki| %>
     <br> <strong><%= link_to wiki.title, wiki %></strong>
-=======
   <% @wikis.each do |wiki| %>
     <%= link_to wiki.title, wiki %>
->>>>>>> master
     <small>
       <%= wiki.body %>
     </small>
@@ -45,7 +39,6 @@ Also, let me create a new wiki -->
 </div>
 
 <!-- Style me! -->
-<<<<<<< HEAD
 <div class="downgrade">
   <br>
   <% if @user.is_premium? %>
@@ -64,11 +57,9 @@ Also, let me create a new wiki -->
 
 <div class="copyright">
   © 2016 WikiOne
-=======
 <div class="payment">
   <br>
   <br>
     <%= render partial: "charges/new_charge" %>
   <br>
->>>>>>> master
 </div>
