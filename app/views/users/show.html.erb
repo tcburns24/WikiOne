@@ -22,7 +22,6 @@ Also, let me create a new wiki -->
     <% current_user.roles.each do |role| %>
       <h4><%= "Role: " "#{role.name}" %></h4>
     <% end %>
-    <h4><%= "Role: " "#{current_user.roles.first.name}" %></h4>
   <br>
 </div>
 
@@ -30,8 +29,6 @@ Also, let me create a new wiki -->
   <h4> My Wikis </h4>
   <% @wikis.each do |wiki| %>
     <br> <strong><%= link_to wiki.title, wiki %></strong>
-  <% @wikis.each do |wiki| %>
-    <%= link_to wiki.title, wiki %>
     <small>
       <%= wiki.body %>
     </small>
@@ -57,9 +54,4 @@ Also, let me create a new wiki -->
 
 <div class="copyright">
   © 2016 WikiOne
-<div class="payment">
-  <br>
-  <br>
-    <%= render partial: "charges/new_charge" %>
-  <br>
 </div>
