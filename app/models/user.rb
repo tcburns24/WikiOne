@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+
   rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -6,6 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :wikis
+  has_many :collaborators
   after_initialize :set_role
 
   def downgrade
