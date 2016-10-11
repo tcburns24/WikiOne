@@ -259,8 +259,9 @@ RSpec.describe WikisController, type: :controller do
   end
 
   #=======================================#
-  
+
   context "premium" do
+
     describe "GET index" do
       it "returns http success" do
         get :index
@@ -371,14 +372,12 @@ RSpec.describe WikisController, type: :controller do
 
     describe "DELETE destroy" do
       it "deletes the wiki" do
-        delete :destroy, {id: @my_wiki.id}
-        count = Wiki.where({id: @my_wiki.id}).size
-        expect(count).to eq 0
-      end
-
-      it "redirects to wiki index" do
-        delete :destroy, {id: @my_wiki.id}
-        expect(response).to redirect_to wikis_path
+        @my_user.add_role :premium
+        expect {
+            bypass_rescue
+            delete :destroy, {id: @my_wiki.id}
+          }.to raise_error Pundit::NotAuthorizedError
+        @my_user.remove_role :premium
       end
     end
   end

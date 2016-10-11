@@ -29,6 +29,8 @@ group :development, :test do
   gem 'faker'
 end
 
+gem 'redcarpet'
+
 gem 'stripe'
 
 gem 'rails-controller-testing'

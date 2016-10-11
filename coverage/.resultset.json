@@ -36,6 +36,7 @@
         1,
         null,
         1,
+        1,
         null,
         null,
         null,
@@ -601,6 +602,13 @@
       ],
       "/Users/thomasburns/bloc/code/WikiOne/app/helpers/application_helper.rb": [
         1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/thomasburns/bloc/code/WikiOne/app/helpers/charges_helper.rb": [
@@ -681,7 +689,7 @@
         1,
         null,
         1,
-        162,
+        158,
         null,
         null
       ],
@@ -743,10 +751,10 @@
         1,
         null,
         1,
-        49,
-        49,
-        49,
-        49,
+        48,
+        48,
+        48,
+        48,
         null,
         null,
         null,
@@ -1001,6 +1009,7 @@
         null,
         null,
         1,
+        null,
         1,
         1,
         1,
@@ -1112,13 +1121,11 @@
         1,
         1,
         1,
-        0,
-        0,
-        null,
-        null,
         1,
         1,
-        0,
+        1,
+        null,
+        1,
         null,
         null,
         null,
@@ -1178,8 +1185,8 @@
         null,
         null,
         1,
-        4,
-        4,
+        3,
+        3,
         null,
         1,
         1,
@@ -1220,8 +1227,6 @@
         1,
         0,
         null,
-        null,
-        null,
         null
       ],
       "/Users/thomasburns/bloc/code/WikiOne/app/policies/wiki_policy.rb": [
@@ -1229,8 +1234,8 @@
         1,
         null,
         1,
-        49,
-        49,
+        48,
+        48,
         null,
         null,
         1,
@@ -1270,7 +1275,7 @@
         null,
         null,
         1,
-        4,
+        3,
         null,
         null,
         null
@@ -1331,10 +1336,6 @@
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1475796828
-=======
-    "timestamp": 1475170308
->>>>>>> master
+    "timestamp": 1476146831
   }
 }
