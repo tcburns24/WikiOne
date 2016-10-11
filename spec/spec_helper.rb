@@ -2,6 +2,7 @@ require 'simplecov'
 require 'pundit/matchers'
 SimpleCov.start
 require 'factory_girl_rails'
+require 'redcarpet'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
