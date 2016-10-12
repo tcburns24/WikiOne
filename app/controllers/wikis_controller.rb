@@ -2,18 +2,19 @@ class WikisController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @wikis = Wiki.all
-    authorize @wikis
+    @wikis = policy_scope(Wiki)
+    #authorize @wikis
   end
 
   def show
     @wiki = Wiki.find(params[:id])
-    authorize @wiki
+    #authorize @wiki
+    @all_collaborators = User.where.not(id: current_user.id)
   end
 
   def new
     @wiki = Wiki.new
-    authorize @wiki
+    #authorize @wiki
   end
 
   def create
