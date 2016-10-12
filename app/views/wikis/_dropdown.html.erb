@@ -1,5 +1,4 @@
-<%= form_for @all_collaborators do |f| %>
-  <%= f.text_field :name %>
-  <%= f.select(:all_collaborators, options_for_select([@all_collaborators])) %>
+<%= form_for Collaborator.new do |f| %>
+  <%= f.select(:user_id, @all_collaborators.collect {|w| [ w.email, w.id ] }) %>
   <%= f.submit %>
 <% end %>
