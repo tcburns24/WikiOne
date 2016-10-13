@@ -33,12 +33,12 @@ class WikisController < ApplicationController
 
   def edit
     @wiki = Wiki.find(params[:id])
-    authorize @wiki
+    #authorize @wiki
   end
 
   def update
     @wiki = Wiki.find(params[:id])
-    authorize @wiki
+    # authorize @wiki
 
     @wiki.assign_attributes(wiki_params)
 
