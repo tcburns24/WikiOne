@@ -9,7 +9,7 @@ class WikisController < ApplicationController
   def show
     @wiki = Wiki.find(params[:id])
     #authorize @wiki
-    @all_collaborators = User.where.not(id: current_user.id)
+    @all_collaborators = Collaborator.available(@wiki, current_user)
   end
 
   def new

@@ -4,17 +4,20 @@ RSpec.describe CollaboratorsController, type: :controller do
 
   describe "POST create" do
     it "increases the number of collaborators by 1" do
-      expect{post :create, collaborator: {user_id: "Sample ID", wiki_id: "sample wiki id"}}.to change(Collaborator,:count).by(1)
+      expect { post :create, collaborator: { user_id: 123, wiki_id: 456 }}.to change(Collaborator,:count).by(1)
     end
   end
 
   describe "DELETE destroy" do
-    it "redirects to wiki index" do
-      expect {
-          bypass_rescue
-          delete :destroy, {id: @collaborator.id}
-        }.to raise_error Pundit::NotAuthorizedError
-      
+    it "deletes the collaborator" do
+      delete :destroy, user_id: 123, wiki_id: 456
+      count = Collaborator.where({user_id: 123}).count
+      expect(count).to eq 0
+    end
+
+    it "returns HTTP success" do
+      delete :destroy, user_id: 123, wiki_id: 456
+      expect(response).to have_http_status(:success)
     end
   end
 end

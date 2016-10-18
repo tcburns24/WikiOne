@@ -1,15 +1,14 @@
 class CollaboratorsController < ApplicationController
 
   def create
-    #binding.pry
     @collaborator = Collaborator.new(collaborator_params)
-    @wiki = Wiki.find_by(params[:collaborator][:wiki_id])
+    @wiki = Wiki.find_by(id: params[:collaborator][:wiki_id])
 
     if @collaborator.save
-      flash[:notice] = "Wiki has been saved successfully."
+      flash[:notice] = "Collaborator has been saved successfully."
       redirect_to @wiki
     else
-      flash[:alert] = "There was an error saving the wiki. Please try again."
+      flash[:alert] = "There was an error saving the collaborator. Please try again."
       render :new
     end
   end

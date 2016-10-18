@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-10-13T11:50:03-07:00">2016-10-13T11:50:03-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-10-18T10:51:16-07:00">2016-10-18T10:51:16-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">88.97%</span></span>
+    (<span class="covered_percent"><span class="yellow">87.78%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.02
+         1.93
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>45</b> files in total.
-    <b>535</b> relevant lines. 
-    <span class="green"><b>476</b> lines covered</span> and
-    <span class="red"><b>59</b> lines missed </span>
+    <b>540</b> relevant lines. 
+    <span class="green"><b>474</b> lines covered</span> and
+    <span class="red"><b>66</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#c063334e844d24f717e5e3aba70f7ebe328dfcf2" class="src_link" title="app/controllers/wikis_controller.rb">app/controllers/wikis_controller.rb</a></td>
-        <td class="yellow strong">85.37 %</td>
+        <td class="yellow strong">84.62 %</td>
         <td>73</td>
-        <td>41</td>
-        <td>35</td>
+        <td>39</td>
+        <td>33</td>
         <td>6</td>
-        <td>4.4</td>
+        <td>4.3</td>
       </tr>
       
       <tr>
@@ -173,11 +173,11 @@
       <tr>
         <td class="strong"><a href="#dc80629e7be5eca12cc3cf7708f4f527dfc69812" class="src_link" title="app/models/collaborator.rb">app/models/collaborator.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>11</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>4.4</td>
       </tr>
       
       <tr>
@@ -197,7 +197,7 @@
         <td>11</td>
         <td>10</td>
         <td>1</td>
-        <td>15.2</td>
+        <td>16.0</td>
       </tr>
       
       <tr>
@@ -222,12 +222,12 @@
       
       <tr>
         <td class="strong"><a href="#52f877d807bbd8054f34d46cf19a92b6dadf6b13" class="src_link" title="app/policies/wiki_policy.rb">app/policies/wiki_policy.rb</a></td>
-        <td class="red strong">72.73 %</td>
+        <td class="red strong">63.64 %</td>
         <td>80</td>
         <td>44</td>
-        <td>32</td>
-        <td>12</td>
-        <td>3.2</td>
+        <td>28</td>
+        <td>16</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -422,12 +422,12 @@
       
       <tr>
         <td class="strong"><a href="#a36006b027ce883a5c0f042eec99c5aeca6dd1b1" class="src_link" title="spec/controllers/collaborators_controller_spec.rb">spec/controllers/collaborators_controller_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>20</td>
+        <td class="red strong">76.92 %</td>
+        <td>23</td>
+        <td>13</td>
         <td>10</td>
-        <td>10</td>
-        <td>0</td>
-        <td>1.1</td>
+        <td>3</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -605,7 +605,7 @@
         <li class="missed" data-hits="0" data-linenumber="5">
           
           
-          <code class="ruby">    @wiki = Wiki.find_by(params[:collaborator][:wiki_id])</code>
+          <code class="ruby">    @wiki = Wiki.find_by(id: params[:collaborator][:wiki_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -623,7 +623,7 @@
         <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">      flash[:notice] = &quot;Wiki has been saved successfully.&quot;</code>
+          <code class="ruby">      flash[:notice] = &quot;Collaborator has been saved successfully.&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="9">
@@ -641,7 +641,7 @@
         <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">      flash[:alert] = &quot;There was an error saving the wiki. Please try again.&quot;</code>
+          <code class="ruby">      flash[:alert] = &quot;There was an error saving the collaborator. Please try again.&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
@@ -963,10 +963,10 @@
         <div class="source_table" id="c063334e844d24f717e5e3aba70f7ebe328dfcf2">
   <div class="header">
     <h3>app/controllers/wikis_controller.rb</h3>
-    <h4><span class="yellow">85.37 %</span> covered</h4>
+    <h4><span class="yellow">84.62 %</span> covered</h4>
     <div>
-      <b>41</b> relevant lines. 
-      <span class="green"><b>35</b> lines covered</span> and
+      <b>39</b> relevant lines. 
+      <span class="green"><b>33</b> lines covered</span> and
       <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
@@ -1043,7 +1043,7 @@
         <li class="covered" data-hits="9" data-linenumber="12">
           <span class="hits">9</span>
           
-          <code class="ruby">    @all_collaborators = User.where.not(id: current_user.id)</code>
+          <code class="ruby">    @all_collaborators = Collaborator.available(@wiki, current_user)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -1184,10 +1184,10 @@
           <code class="ruby">    @wiki = Wiki.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="36">
-          <span class="hits">9</span>
+        <li class="never" data-hits="" data-linenumber="36">
           
-          <code class="ruby">    authorize @wiki</code>
+          
+          <code class="ruby">    #authorize @wiki</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
@@ -1214,10 +1214,10 @@
           <code class="ruby">    @wiki = Wiki.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="41">
-          <span class="hits">6</span>
+        <li class="never" data-hits="" data-linenumber="41">
           
-          <code class="ruby">    authorize @wiki</code>
+          
+          <code class="ruby">    # authorize @wiki</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
@@ -1679,8 +1679,8 @@
     <h3>app/models/collaborator.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1709,10 +1709,46 @@
         <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.available(wiki, current_user)</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="6">
+          <span class="hits">9</span>
+          
+          <code class="ruby">    possible_collaborators = User.all.where.not(id: current_user.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="7">
+          <span class="hits">9</span>
+          
+          <code class="ruby">    already_taken = wiki.collaborators.map{ |collaborator| User.find_by_id(collaborator.user_id)}</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="8">
+          <span class="hits">9</span>
+          
+          <code class="ruby">    possible_collaborators - already_taken</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
@@ -1940,8 +1976,8 @@
           <code class="ruby">  def set_role</code>
         </li>
       
-        <li class="covered" data-hits="158" data-linenumber="19">
-          <span class="hits">158</span>
+        <li class="covered" data-hits="167" data-linenumber="19">
+          <span class="hits">167</span>
           
           <code class="ruby">    self.add_role :standard</code>
         </li>
@@ -2367,11 +2403,11 @@
         <div class="source_table" id="52f877d807bbd8054f34d46cf19a92b6dadf6b13">
   <div class="header">
     <h3>app/policies/wiki_policy.rb</h3>
-    <h4><span class="red">72.73 %</span> covered</h4>
+    <h4><span class="red">63.64 %</span> covered</h4>
     <div>
       <b>44</b> relevant lines. 
-      <span class="green"><b>32</b> lines covered</span> and
-      <span class="red"><b>12</b> lines missed.</span>
+      <span class="green"><b>28</b> lines covered</span> and
+      <span class="red"><b>16</b> lines missed.</span>
     </div>
   </div>
   
@@ -2402,14 +2438,14 @@
           <code class="ruby">  def initialize(user, wiki)</code>
         </li>
       
-        <li class="covered" data-hits="27" data-linenumber="5">
-          <span class="hits">27</span>
+        <li class="covered" data-hits="12" data-linenumber="5">
+          <span class="hits">12</span>
           
           <code class="ruby">    @user = user</code>
         </li>
       
-        <li class="covered" data-hits="27" data-linenumber="6">
-          <span class="hits">27</span>
+        <li class="covered" data-hits="12" data-linenumber="6">
+          <span class="hits">12</span>
           
           <code class="ruby">    @wiki = wiki</code>
         </li>
@@ -2480,8 +2516,8 @@
           <code class="ruby">  def update?</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="18">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
           
           <code class="ruby">    if wiki.private?</code>
         </li>
@@ -2498,8 +2534,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="21">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
           
           <code class="ruby">      user.present?</code>
         </li>
@@ -2600,8 +2636,8 @@
           <code class="ruby">  def edit?</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="38">
-          <span class="hits">9</span>
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
           
           <code class="ruby">    if wiki.private?</code>
         </li>
@@ -2618,8 +2654,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="41">
-          <span class="hits">9</span>
+        <li class="missed" data-hits="0" data-linenumber="41">
+          
           
           <code class="ruby">      user.present?</code>
         </li>
@@ -6171,11 +6207,11 @@
         <div class="source_table" id="a36006b027ce883a5c0f042eec99c5aeca6dd1b1">
   <div class="header">
     <h3>spec/controllers/collaborators_controller_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">76.92 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
+      <b>13</b> relevant lines. 
       <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -6221,7 +6257,7 @@
         <li class="covered" data-hits="2" data-linenumber="7">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect{post :create, collaborator: {user_id: &quot;Sample ID&quot;, wiki_id: &quot;sample wiki id&quot;}}.to change(Collaborator,:count).by(1)</code>
+          <code class="ruby">      expect { post :create, collaborator: { user_id: 123, wiki_id: 456 }}.to change(Collaborator,:count).by(1)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -6251,52 +6287,70 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;redirects to wiki index&quot; do</code>
+          <code class="ruby">    it &quot;deletes the collaborator&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect {</code>
+          <code class="ruby">      delete :destroy, user_id: 123, wiki_id: 456</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="14">
           
-          <code class="ruby">          bypass_rescue</code>
+          
+          <code class="ruby">      count = Collaborator.where({user_id: 123}).count</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="15">
           
-          <code class="ruby">          delete :destroy, {id: @collaborator.id}</code>
+          
+          <code class="ruby">      expect(count).to eq 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">        }.to raise_error Pundit::NotAuthorizedError</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns HTTP success&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete :destroy, user_id: 123, wiki_id: 456</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">      expect(response).to have_http_status(:success)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">end</code>
