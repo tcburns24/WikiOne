@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :wikis
+  has_many :collaborators
   after_initialize :set_role
 
   def downgrade

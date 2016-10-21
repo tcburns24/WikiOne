@@ -9,7 +9,6 @@
       <span>Upgrade to Premium for $19.99</span>
     </label>
   </article>
-
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
           data-description="Premium WikiOne Membership - #{current_user.username}"
