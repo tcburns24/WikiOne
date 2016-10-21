@@ -17,11 +17,11 @@ class CollaboratorsController < ApplicationController
     @collaborator = Collaborator.find(params[:id])
 
     if @collaborator.destroy
-      flash[:notice] = "#{@collaborator.email} has been removed."
-      redirect_to wiki
+      flash[:notice] = "Collaborator has been removed."
+      redirect_to @collaborator.wiki
     else
       flash.now[:alert] = "There as an error removing the collaborator."
-      redirect_to wiki
+      redirect_to @collaborator.wiki
     end
   end
 

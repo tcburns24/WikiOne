@@ -22,16 +22,27 @@
 
 <br>
 
-  <table>
-    <thead>
-      <tr>
-        <p class="tablehead">Current Collaborators:</p>
-      </tr>
-    </thead>
-    <tbody>
-      <%= render @wiki.collaborators %>
-    </tbody>
-  </table>
+<div class="row">
+  <div class="col-md-8">
+    <div class="media">
+      <div class="media-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Current Collaborators:</th>
+              <th></th>
+              <th>Column?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <%= render @wiki.collaborators %>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
 
 <br>
