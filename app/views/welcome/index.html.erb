@@ -1,3 +1,11 @@
-<h1> Welcome to WikiOne </h1>
-<h3 id="index-title"> A Wiki for All. </h3>
-<div class="posts"> Let there be wiki. </div>
+<div class="jumbotron">
+  <h1> Welcome to WikiOne </h1>
+  <h3 id="index-title"> A Wiki for All. </h3>
+  <br>
+  <div class="posts"> WikiOne is a social web app where users can create their own wikis, then select friends as collaborators. <br> Sign up and create your first wiki. </div>
+  <br>
+  <table class="nav nav-pills">
+    <td><%= link_to "Sign Up", new_user_registration_path, :class => 'btn btn-primary' %></td>
+    <td><%= link_to "Sign In", new_user_session_path, :class => 'btn btn-success' %></td>
+  </table>
+</div>

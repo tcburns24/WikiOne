@@ -30,6 +30,8 @@ group :development, :test do
   gem 'faker'
 end
 
+gem 'friendly_id'
+
 gem 'redcarpet'
 
 gem 'stripe'
