@@ -2,22 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-  color: #9e1b28;
+.abouthead {
+  color: #e2fcff;
+  background: #195f77;
 }
 
 #index-title {
-  text-align: center;
-  font-size: 35px;
-  color: #672626;
+  text-align: left;
+  font-style: italic;
+  font-size: 25px;
+  color: 	#195f77;
 }
 
-.posts {
-  border: solid;
-  margin: 5px;
-  padding: 5px;
-  height: 200px;
-}
 
 section {
   background: #9e1b28;
